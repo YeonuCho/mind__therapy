@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mind Therapy</title>
+<style type="text/css">
+	@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+	html{font-family: 'Pretendard'}
+	body{margin: 0;}
+	section{background: black;}
+	p{margin: 2px;}
+	ul{background: orange;
+			width: 100%;
+			margin: auto;
+			scroll-padding-right: 30px;
+			float: right;
+			position: fixed; top: 0; right: 30px;}
+	li{background: yellow;
+			list-style-type: none;
+			width: ; height: 30px;
+			text-align: center;
+			line-height: 30px;
+			padding: 0px 30px;
+			margin-top: 15px;
+			font-size: 19px;
+			float: right;
+			position: relative;}
+	a{display: block;
+			background: none;
+			color: white;
+			padding-top: 5px;
+			text-decoration: none;}
+
+	.rowabox:hover{transition: all 0.5s;
+					background: black;}
+	.container1:hover{transition: all 0.5s;
+					background: #707070;}
+	a:hover{transition: all 0.5s;
+					color: #8DFFFF;}
+	.roundbox:hover{transition: all 0.5s;
+					background: black;
+					color: white;}
+
+
+	.row1{width: 1200px; height: 450px;
+			background: gray;
+			margin: auto;
+			display: flex;
+			padding: 0px 5px;
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+	.row15{width: 100%; height: 52px;
+			background: white;
+			margin: auto;
+			display: flex;
+			padding: 0px 5px;
+			margin-top: 0px;}
+	.row2{width: 100%; height: 1300px;
+			background: gray;
+			margin: auto;
+			display: flex;
+			padding: 0px 5px;
+			margin-top: 0px;}
+
+		.row2_5{width: 1200px; height: ; 
+				background: black;
+				margin: 0;
+				}	
+
+	.row25{width: 100%; height: 300px;
+			background: #8DFFFF;
+			margin: auto;
+			display: flex;
+			padding: 0px 5px;
+			margin-top: 0px;}
+
+	.row3{
+			background: white;
+			height: 680px;
+			margin: auto;
+			display: flex;
+			padding: 0px 0px;
+			margin-top: 0px;
+			position: relative;
+
+		}
+
+
+	.row4{height: 900px;
+			width: 1200px;
+			background: black;
+			margin: auto;
+			padding: 0px 5px;
+			margin-top: 0px;}
+
+	.row4 p{color:white; text-align: center;}
+	.row4 .container1 p{color: white; text-align: center;}
+
+	.row5{width: 100%; height: 80px;
+			background: white;
+			margin: auto;
+			display: flex;
+			padding: 0px 5px;
+			margin-top: 0px;}
+
+	.rowbox{width: 2080px;
+			background: none;
+			margin: 0 auto;
+			display: flex;}
+	.rowbluebox{width: 160px; height: 160px; background: #8DFFFF;}
+	.rownonebox{width: 160px; height: 160px; background: none;}
+	.rowabox{width: 160px; height: 160px; background: #D4FE60;}
+
+	.click{font-weight: bold;
+			font-size: 2rem;
+			display: block;
+			padding: 38px;
+			padding-top: 54px;}
+
+	.col-1{width: 1390px; background: blue; margin: 0px 5px;}
+	.col-2{width: 690px; background: blue; margin: 0px 5px;}
+	.col-3{width: 390px; background: blue; margin: 0px 5px;}
+
+	.bg-none{background: none;}
+	.bg-black{background: black;}
+	.bg-white{background: white;}
+	.bg-blue{background: #8DFFFF}
+
+	.bg-header{background: url('main.jpg');
+				background-attachment: fixed;
+				background-position: 60px 0px;}
+
+	.container1{width: 200px; height: 200px;
+				display: block;
+				margin: auto;
+				background: black;
+				border-radius: 250px;
+				border: solid #707070 1px}
+
+	.container2{width: 400px; height: 400px;
+				display: block;
+				margin: auto;}
+
+	.container3{padding-top: 60px;}
+
+	.container4{margin: auto;
+				padding-top: 180px;}
+
+	.text-white{color: white;}
+	.text-black{color: black;}
+
+	.textcenter{text-align: center;}
+
+	.textbox{padding: 134px; padding-right: 172px; word-break: keep-all;
+			line-height: 24px;}
+	.textbox h1{padding: 0; margin:0;}
+
+	.roundbox{background: #D4FE60;
+			padding: 30px; 
+			border-radius: 50px;
+			text-align: center;
+			width: 150px;
+			margin-left: 134px;}
+
+	.padding2px{padding: 2px;}
+	.padding30px{padding: 30px;}
+
+	.margintop{margin-top: 130px;}
+
+	.flex{display: flex;}
+
+	.right{display: block;
+			float: right;
+			padding: 23px;}
+	.left{display: block;
+			float: left;
+			padding: 10px;
+			padding-left: 40px;}
+
+	img{width: 100%;
+		display: block;
+		margin: auto;}
+
+
+	/* 움직이는 텍스트 */
+		.animated-title {font-size: 2rem; font-family:'Pretendard'; font-weight:300; position: relative; width: 100%; max-width:100%; height: auto; padding:100px 0; overflow-x: hidden; overflow-y: hidden; }
+		.animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 60s linear infinite; }
+		@keyframes marquee {
+  		from { transform: translateX(0); }
+  		to { transform: translateX(-50%); }
+		}
+		@media (hover: hover) and (min-width: 700px){
+		.animated-title .content {-webkit-transform: translateY(calc(100% - 8rem)); transform: translateY(calc(100% - 8rem));}
+    		}
+
+</style>
+</head>
+<body>
+	<header class="bg-header">
+		<nav class="bg-none">
+			<ul class="bg-none">
+				<li class="bg-none"><a>My Page</a></li>
+				<li class="bg-none"><a>Mind Therapy</a></li>
+				<li class="bg-none"><a>Test</a></li>
+				<li class="bg-none"><a>About us</a></li>
+			</ul>
+		</nav>
+		<div class="row1 bg-none">
+		<div class="col-1 bg-none margintop">
+			<h1 class="text-white">Mind Therapy</h1>
+			<p class="text-white">당신을 치유하는 시간</p>
+			<p class="text-white textpadding">나에 대해 알아보는 시간을 가지세요</p>
+		</div>
+		</div>
+		<div class="rowbox">
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+		</div>
+		<div class="rowbox">
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowabox"><p class="click text-white"><a href="">Click!</a><p></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+		</div>
+		<div class="rowbox">
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+		</div>
+		<div class="rowbox">
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+			<div class="rowbluebox"></div>
+			<div class="rownonebox"></div>
+		</div>	
+		
+	</header>
+	<section>
+		<div class="row15">
+		<div class="animated-title">
+  		<div class="track">
+    	<div class="content">&nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy &nbsp;Welcome To Mind Therapy </div>
+  		</div>
+		</div>
+		</div>
+	</section>
+	<section>
+		<div class="row2 bg-black" >
+		<div class="row2_5" style="display: block; margin: auto;">
+			<img src="./img/meditation.jpg" style="margin: auto;">
+			<div style="padding-top: 60px;">
+			<p class="text-white textcenter">요즘 ‘나’는 어떤 것 같나요?
+			<br>혹시 반복되는 일상에 지치거나 때로는 분노마저 느끼고 있지는 않나요? 나의 감정에 좀 더 솔직해지고 보듬어주는 시간을 가지세요. 나는 소중한 존재니까요.</p>
+			
+			<p class="text-white textcenter padding30px">마인드 테라피는 일상에 지친 당신을 위해 알맞은 음악을 들려드리는  서비스를 제공하고 있습니다.<br>테스트를 통해 나에 대해 알아가고 음악을 들으며 힐링하세요.</p>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section>
+		<div class="row25">
+		<div class="bg-blue flex" style="margin: auto;">
+			<img src="./img/woman.png" style="width: 280px; padding: 0px 120px;">
+			<img src="./img/woman2.png" style="width: 280px; padding: 0px 120px;">
+			<img src="./img/woman3.png" style="width: 280px; padding: 0px 120px;">
+		</div>
+		</div>
+	</section>
+	
+
+
+
+	<section>
+		<div class="row3 flex">
+			<img src="./img/boxforwaiting2.svg" style="height: 680px;">
+			<img src="./img/waitingroom.jpg" style="position: absolute; width:auto; height:440px; top:134px; left:150px;">
+			<div>
+			<div class="textbox">
+				<h1 style="padding-bottom: 16px;">테스트를 통해 현재 자신에 대해 알아보세요</h1>
+				<p>로르샤흐 잉크 반점 검사는 세계에서 가장 유명한 심리 투영 검사법 중 하나입니다. 로르샤흐 검사는 흔히 응시자의 성격 특성과 정서적 기능을 알아보는 데 쓰이는데, 저희 마인드 테라피는 이 로르샤흐 검사법에서 한 번 더 발전한 심리 테스트를 개발하여 사용자의 자신에 대한 이해도를 높이도록 도와드리고 있습니다.</p>
+				<p>당신도 몰랐던 당신의 심층 심리에 대해 알아보세요.</p>
+			</div>
+			<div>
+				<div class="roundbox">지금 바로 테스트 하기</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section>
+		<div class="row4">
+			<div class="container4">
+			<div class="container3">
+			<p>‘나’에 대해 이미 알고 있다고요?<br>
+			그렇다면 망설이지 말고 자신의 상태에 맞는 테라피를 들으러 출발하세요.</p>
+			</div>
+			<div class="container3">
+			<div class="flex" style="justify-content: space-around;">
+				<div>
+					<div class="container1"><img src="./img/icon_yellow.svg" style="width: 60%; padding-top: 40px;"></div>
+					<p style="padding-top: 10px;">수면부족/피로누적</p>
+				</div>
+				<div>
+					<div class="container1"><img src="./img/icon_white.svg" style="width: 60%; padding-top: 40px;"></div>
+					<p style="padding-top: 10px;">우울감/스트레스</p>
+				</div>
+				<div>
+					<div class="container1"><img src="./img/icon_blue.svg" style="width: 60%; padding-top: 40px;"></div>
+					<p style="padding-top: 10px;">기분 저하</p>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+			<div class="left"><p style="font-size: 16px; line-height: 24px;">Seoul National University of Science and Education. <br>© 2023 Yeonu Cho</p></div>
+			<div class="right"><p><a class="text-black" href="https://www.instagram.com/yeonu__1616/" target="_self" style="font-size: 21px; text-decoration: none;">Instagram</a></p></div>
+		</div>
+	</footer>
+</body>
+</html>
